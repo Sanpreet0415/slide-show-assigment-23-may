@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>slide image 23 may assigment project</title>
+  </head>
+  <style>
+    img {
+        
+      height: 455px;
+      width: 330px;
+    }
+    #f{
+        display: flex;
+        justify-content: center;
+    }
+  </style>
+  <body>
+    <div id="f"></div>
+        <!-- <img src="https://preview.redd.it/doraemon-movie-tierlist-and-reviews-link-in-comments-v0-8cu18vezmbna1.png?width=1080&crop=smart&auto=webp&s=a25319449fadeb2b38d9182258d4f0ab3ada0ff6" alt=""/>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ13FNdeqNGNsbH0vvC4GqOh85MOs9BauNDsQ&s" alt="" />
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJFxrk96CRVr96VzcvA2Dwe1MNeJ_ADNh5Bw&s" alt="" />
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTL8NXAZSI_PcvREOfZ7XXpy5Q5mlu99DcyUg&s" alt="" />
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFBI2aYXq_gFanixtebv5akQCsNvTS5_5Vqw&s" alt=""/>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWSx9UCJJc9ndypZ5tU2E8kspHAbM8RSQp8w&s" alt="" /> -->
+
+    
+  </body>
+  <script>
+    let images=[
+    'https://preview.redd.it/doraemon-movie-tierlist-and-reviews-link-in-comments-v0-8cu18vezmbna1.png?width=1080&crop=smart&auto=webp&s=a25319449fadeb2b38d9182258d4f0ab3ada0ff6', 
+    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ13FNdeqNGNsbH0vvC4GqOh85MOs9BauNDsQ&s',
+    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJFxrk96CRVr96VzcvA2Dwe1MNeJ_ADNh5Bw&s',
+    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTL8NXAZSI_PcvREOfZ7XXpy5Q5mlu99DcyUg&s',
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFBI2aYXq_gFanixtebv5akQCsNvTS5_5Vqw&s" ,
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWSx9UCJJc9ndypZ5tU2E8kspHAbM8RSQp8w&s"
+    ]
+    let imgindex=0;
+    let dis = document.getElementById("f");
+    let slide= document.createElement("img");
+    slide.src=images[imgindex]
+    dis.append(slide);
+    setInterval(()=>{
+        imgindex = (imgindex+1)% images.length
+            slide.src=images[imgindex]
+    },2000)
+
+
+  </script>
+</html>
